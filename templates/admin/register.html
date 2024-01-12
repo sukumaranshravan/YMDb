@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+</head>
+    <link rel="stylesheet" href="/templates/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="/media/logo.jpeg" type="image/x-icon">
+<body>
+    <div class="container signup" style="border: solid rgb(227, 221, 221); margin-top: 50px; border-radius: 20px; width: 600px;">
+        <a href="{% url 'start_up' %}"><img class="mb-4" src="/media/logo.jpeg" alt="" width="200" height="100" style="margin-left: 150px; margin-top: 10px; border-radius: 5px;" ></a>
+            <p class="mb-3" style="margin-left: 100px; font-size: large;font-weight: bold;">Create Account</p>
+            <div class="row register">            
+                <div class="col-8" style="margin-left: 100px; font-weight: bold;">  
+                    <form action="{% url 'registeraction' %}" method="post">
+                        {% csrf_token %}             
+                    <p>Your Name<input type="text" name="name" class="form-control" placeholder="first and last name"></p>
+                    <p>Email<input type="text" name="email" class="form-control"></p>
+                    <p>Mobile<input type="text" name="mobile" class="form-control"></p>
+                    <p>Password<input type="text" name="password" class="form-control" placeholder="at least 6 characters"></p>
+                    <p>Confirm Password<input type="text" name="confirm_password" class="form-control"></p>
+                    <p style="font-size: small; font-weight: lighter;"><input type="submit" value="Sign Up" class="btn btn-outline-primary" style="background-color: #FFD814; color: black; border: none; width: 360px;">
+                    </form> 
+                     &nbsp;already a member? <a href="{% url 'sign_in' %}">Sign In</a></p>
+                </div>    
+            </div>               
+    </div>
+    
+    <div class="container">
+    <footer class="py-3 my-4">
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item"><a href="{% url 'start_up' %}" class="nav-link px-2 text-body-secondary">Home</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Terms & Conditions</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
+      </ul>
+      <p class="text-center text-body-secondary">© 2023-24 &nbsp; YMDb, Inc</p>
+    </footer>
+    </div>
+</body>
+</html>

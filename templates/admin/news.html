@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News:  Guest</title>    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="/media/logo.jpeg" type="image/x-icon">
+    <style>
+      .card {
+        font-family: sans-serif;
+      }
+      .align-items-md-stretch {
+        margin-bottom: 20px;
+
+      }
+    </style>
+</head>
+<body style="background-color: black; color: white;">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Fifth navbar example">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#"><img src="/media/logo.jpeg" alt="logo" height="50px" style="border-radius: 5px;"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+        
+              <div class="collapse navbar-collapse" id="navbarsExample05">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{% url 'start_up' %}">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{% url 'shows_guest' %}">Shows</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="{% url 'sign_in' %}">Sign In</a>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                  </form>
+              </div>
+            </div>
+          </nav>
+       <!-- end of navbar -->
+       <!-- news starts here -->
+       <div class="container py-4">            
+        <div class="p-5 mb-4 bg-dark border rounded-3">
+          <div class="container-fluid py-5">
+            <h1 class="display-5 fw-bold">Oppenheimer Wins Best Picture – Drama</h1>
+            <p class="col-md-8 fs-4">Oppenheimer wins the award for Best Motion Picture – Drama at the 81st Golden Globe Awards.</p>
+            <a href="https://goldenglobes.com/"><button class="btn btn-outline-light btn-lg" type="button">See News</button></a>
+          </div>
+        </div>
+    
+        <div class="row align-items-md-stretch">
+          <div class="col-md-6">
+            <div class="h-100 p-5 text-bg-dark border rounded-3">
+              <h2>Christopher Nolan wins first Golden Globe.</h2>
+              <p>Christopher Nolan wins the award for Best Director – Motion Picture for “Oppenheimer” at the 81st Golden Globe Awards</p>
+              <button class="btn btn-outline-light" type="button">See News</button>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="h-100 p-5 bg-dark border rounded-3">
+              <h2>Jimmy Kimmel Back to Host 96th Oscars for the Fourth Time</h2>
+              <p>The 96th Oscars will be held on Sunday, March 10, 2024, at the Dolby® Theatre at Ovation Hollywood and will be televised live on ABC and in more than 200 territories worldwide.</p>
+              <a href="https://abc.com/shows/oscars/news/oscar-news/jimmy-kimmel-to-host-oscars-2024"><button class="btn btn-outline-secondary" type="button">See News</button></a>
+            </div>
+          </div>
+        </div>
+        <div class="row align-items-md-stretch">
+            <div class="col-md-6">
+              <div class="h-100 p-5 text-bg-dark border rounded-3">
+                <h2>81st Golden Globe</h2>
+                <p>Oppenheimer And Poor Things Triumph At The 2024 Golden Globe.This year's Golden Globes, having looked to distance itself from the embattled Hollywood Foreign Press Association in an ongoing attempt to resuscitate its increasingly faltering reputation, happened in Los Angeles on Sunday evening.</p>
+                <a href="https://www.empireonline.com/movies/news/oppenheimer-and-poor-things-triumph-at-the-2024-golden-globes/"><button class="btn btn-outline-light" type="button">See News</button></a>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="h-100 p-5 bg-dark border rounded-3">
+                <h2>Actor Tom Wilkinson Dies Aged 75.</h2>
+                <p>Tom Wilkinson, a character actor who was also adept when called upon to play leading parts, has died. That kicked off a successful career on screens big and small, with his film resume including the likes of Shakespeare In Love, Batman Begins, Mission: Impossible – Ghost Protocol, The Grand Budapest Hotel, Eternal Sunshine Of The Spotless Mind, RocknRolla, Valkyrie and Denial.</p>
+                <a href="https://www.empireonline.com/movies/news/actor-tom-wilkinson-dies-aged-75/"><button class="btn btn-outline-secondary" type="button">See News</button></a>
+              </div>
+            </div>
+          </div>
+        <footer class="pt-3 mt-4 text-body-secondary border-top">
+          © 2023
+        </footer>
+      </div>
+       
+    <div class="container">
+        <footer class="py-3 my-4">
+          <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            <li class="nav-item"><a href="{% url 'start_up' %}" class="nav-link px-2 text-white">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Terms & Conditions</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-white">About</a></li>
+          </ul>
+          <p class="text-center text-white">© 2023-24 &nbsp; YMDb, Inc</p>
+        </footer>
+    </div>
+
+{% if messages %}
+{% for msg in messages %}
+<script>
+    alert("{{msg}}")
+</script>
+{% endfor %}
+{% endif %}
+</body>
+</html>
